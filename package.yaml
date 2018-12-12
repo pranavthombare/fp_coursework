@@ -23,14 +23,20 @@ dependencies:
 - base >= 4.7 && < 5
 - aeson
 - text
+- http-conduit
+- conduit
 - bytestring
+- time
+- network
+- authenticate-oauth
+
 
 library:
   source-dirs: src
 
 executables:
   helloworld-exe:
-    main:                aeson.hs
+    main:                test.hs
     source-dirs:         src
     ghc-options:
     - -threaded
@@ -41,7 +47,7 @@ executables:
 
 tests:
   helloworld-test:
-    main:                aeson.hs
+    main:                test.hs
     source-dirs:         src
     ghc-options:
     - -threaded
